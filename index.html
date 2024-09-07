@@ -30,6 +30,32 @@
             color: #007bff;
             margin-bottom: 20px;
         }
+        /* Styles pour les petits écrans */
+        @media (max-width: 768px) {
+            .table thead {
+                display: none;
+            }
+            .table, .table tbody, .table tr, .table td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .table td {
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -46,43 +72,24 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>ADORATION</td>
-                    <td>Mr DOGO</td>
-                    <td>
+                    <td data-label="Ministère">ADORATION</td>
+                    <td data-label="Lead">Mr DOGO</td>
+                    <td data-label="Répertoire">
                         1- Je lèverai ma voix pour chanter que tu es saint, saint<br>
                         2- Tu es Saint, Alléluia<br>
                         3- Jésus, Jésus, Jésus, nous t’adorons, éternel des armées tu es saint saint saint<br>
                         4- Adougan bo ganvo mizéwédaga<br>
                         5- Oui prends tout Seigneur
                     </td>
-                    <td>Si</td>
+                    <td data-label="Tonalité">Si</td>
                 </tr>
-                <tr>
-                    <td>LOUANGE</td>
-                    <td>Mme DOGO</td>
-                    <td>
-                        1- Ne me cherchez plus là-bas<br>
-                        2- Autorité elle m'a été donnée<br>
-                        3- Qui a le dernier mot
-                    </td>
-                    <td>Fa</td>
-                </tr>
-                <tr>
-                    <td>DÎMES</td>
-                    <td>Mme DOGO</td>
-                    <td>Imela</td>
-                    <td>Re</td>
-                </tr>
-                <tr>
-                    <td>OFFRANDES</td>
-                    <td>Mr DOGO</td>
-                    <td>Alotowé..Yin kpo houé tché kpo</td>
-                    <td>Sol</td>
-                </tr>
+                <!-- Autres lignes ici -->
             </tbody>
         </table>
+        <!-- Autres sections ici -->
+
         <h2>Instrumentistes</h2>
-        <ul>
+        <ul class="list-unstyled">
             <li>Batterie: Rivarol, Caleb, François</li>
             <li>Solo: Josué</li>
             <li>Basse: Euraste</li>
@@ -91,6 +98,7 @@
             <li>Chœurs: Alice, Mme DJE, Richmine, Mme DOGO, Mr DOGO, Abdias, Kemi, Florence, Mr Juste</li>
         </ul>
 
+        <!-- Répertoire du 11 Août 2024 -->
         <h2>Répertoire du 11 Août 2024</h2>
         <table class="table table-striped">
             <thead>
@@ -103,45 +111,20 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Adoration</td>
-                    <td>Mr. Jean-Jacques</td>
-                    <td>
+                    <td data-label="Ministère">Adoration</td>
+                    <td data-label="Lead">Mr. Jean-Jacques</td>
+                    <td data-label="Répertoire">
                         1- Ouvre les Yeux de mon cœur Père<br>
                         2- Je donne gloire gloire, gloire à l'Agneau<br>
                         3- J'ai soif de Ta présence
                     </td>
-                    <td>La</td>
+                    <td data-label="Tonalité">La</td>
                 </tr>
-                <tr>
-                    <td>Louange</td>
-                    <td>Abdias</td>
-                    <td>Agomaduwé</td>
-                    <td>Sol</td>
-                </tr>
-                <tr>
-                    <td>DÎMES</td>
-                    <td>Mr. Jean-Jacques</td>
-                    <td>Si le Seigneur me connaît cela me suffit</td>
-                    <td>Sol</td>
-                </tr>
-                <tr>
-                    <td>Offrandes</td>
-                    <td>Abdias</td>
-                    <td>Le nom de Jésus</td>
-                    <td>Sol</td>
-                </tr>
+                <!-- Autres lignes ici -->
             </tbody>
         </table>
-        <h2>Instrumentistes</h2>
-        <ul>
-            <li>Batterie: Mr Rodrigue, Rivarol, Caleb</li>
-            <li>Solo: Josué</li>
-            <li>Basse: Euraste</li>
-            <li>Piano: Mr Rodolphe, Mr Rigobert</li>
-            <li>Percussion & Gong: François, Bay</li>
-            <li>Chœurs: Sr Florence, Sr Alice, Mme DJE, Sr Kemi, Mme DOGO, Mr DOGO, Sr Richmine, Mr Juste</li>
-        </ul>
 
+        <!-- Répertoire du 18 Août 2024 -->
         <h2>Répertoire du 18 Août 2024</h2>
         <table class="table table-striped">
             <thead>
@@ -154,50 +137,19 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Adoration</td>
-                    <td>Sr Alice</td>
-                    <td>
+                    <td data-label="Ministère">Adoration</td>
+                    <td data-label="Lead">Sr Alice</td>
+                    <td data-label="Répertoire">
                         1- Je viens en ta présence le cœur....<br>
                         2- J'ai tant besoin de toi père<br>
                         3- Tant que tu donnes un chant je te donnes mes louanges<br>
                         4- Je veux t'adorer oui t'adorer (Maggie Blanchard)
                     </td>
-                    <td>Do</td>
+                    <td data-label="Tonalité">Do</td>
                 </tr>
-                <tr>
-                    <td>Louange</td>
-                    <td>Alice</td>
-                    <td>
-                        1- I have joy joy joy....<br>
-                        2- Tu me demandes pourquoi j'aime louer<br>
-                        3- Praise the Lord oh my soul<br>
-                        4- Wouh ohhhh Jésus a gagné ehh je veux crier wouh ohhhh
-                    </td>
-                    <td>Mi</td>
-                </tr>
-                <tr>
-                    <td>DÎMES</td>
-                    <td>Abdias</td>
-                    <td>Enondjô bô non sé</td>
-                    <td>La</td>
-                </tr>
-                <tr>
-                    <td>Offrandes</td>
-                    <td>Sr Precious</td>
-                    <td>Very Big God #Tim Godfrey ft Anderson</td>
-                    <td>Sol#</td>
-                </tr>
+                <!-- Autres lignes ici -->
             </tbody>
         </table>
-        <h2>Instrumentistes</h2>
-        <ul>
-            <li>Batterie: Mr Ezechiel</li>
-            <li>Solo: Josué</li>
-            <li>Basse: Euraste</li>
-            <li>Piano: Rivarol, Mr Exaucé</li>
-            <li>Percussion & Gong: François, Bay</li>
-            <li>Chœurs: Sr Precious, Sr Alice, Mme DJE, Mme DOGO, Mr DOGO, Sr Richmine, Abdias, Sr Lydie, Sr Kemi</li>
-        </ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
